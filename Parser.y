@@ -59,10 +59,10 @@
 %start program
 %%
 
-program: summary {fprintf(file1,"%s", "End of file \t");} 
+program: summary /*{fprintf(file1,"%s", "End of file \t"); } only put it back if debugging */ 
 ;
 
-summary: contents opener rows closer contents | opener rows closer contents
+summary: opener rows closer | opener rows closer contents
 ;
 
 opener: TAGIDENT GTHAN | TAGIDENT IDENT EQUALS NUMBER GTHAN
@@ -125,7 +125,7 @@ EXPR: NUMBER { $$ = $1;}
   | EXPR MODULO EXPR { $$ = fmod($1, $3); }
 ;
 
-S_EXPR: NUMBER  /*{{fprintf(file2,"%0.2lf%s",$1,",");}} */
+S_EXPR: NUMBER  {fprintf(file2,"%0.2lf",$1);}
   | nums NUMBER {fprintf(file2,"%0.2lf",$2);}
 ; 
 
@@ -149,8 +149,8 @@ int main(int argc, char *argv[])
     file1 = fopen(argv[2], "w");
     file2 = fopen(argv[3], "w");    
     //fprintf(file1, "%s%s","TOKEN\t\t","LEXEME\n");   
-	  //fprintf(file1, "-------------------------------------------------\n");
-	  yyparse();
+	//fprintf(file1, "-------------------------------------------------\n");
+	yyparse();
     fclose(yyin);
     fclose(file1);
     fclose(file2);
