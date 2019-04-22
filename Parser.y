@@ -104,7 +104,6 @@ contents: content | content contents
 
 content: LBRACKET S_EXPR RBRACKET  {{fprintf(file2,"%s",",");}}
   | EQUALS EXPR {{fprintf(file2,"%0.2lf%s",$2,",");}}
-//  | ENDTAGHEAD {fprintf(file2,"%s%s",$1,",");}
   | IDENTS {fprintf(file2,"%s",",");}
   | NUMBER {fprintf(file2,"%0.2lf%s",$1,",");}
   | PLUS {fprintf(file2,"%s%s",$1,",");}
@@ -163,7 +162,6 @@ out_contents: out_content | out_content out_contents
 
 out_content: LBRACKET S_EXPR RBRACKET  {{fprintf(file2,"%s",",");}}
   | EQUALS EXPR {{fprintf(file2,"%0.2lf%s",$2,",");}}
-//  | ENDTAGHEAD {fprintf(file2,"%s%s",$1,",");}
   | IDENTS {fprintf(file2,"%s",",");}
   | NUMBER {fprintf(file2,"%0.2lf%s",$1,",");}
   | PLUS {fprintf(file2,"%s%s",$1,",");}

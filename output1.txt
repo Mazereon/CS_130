@@ -70,5 +70,34 @@ IDENT		words
 TAGIDENT 	<tag
 LTHAN		<
 IDENT		notAtag
+LTHAN		<
+***lexical error: illegal character (!)
+MINUS 		-
+MINUS 		-
+IDENT		unterminated
+IDENT		comment
+LTHAN		<
+***lexical error: illegal character (!)
+MINUS 		-
+IDENT		this
+IDENT		is
+IDENT		not
+COMMA 		,
+IDENT		in
+IDENT		fact
+IDENT		there
+IDENT		is
+IDENT		an
+IDENT		invalid
+IDENT		character
+MINUS 		-
+MINUS 		-
+GTHAN		>
+IDENT		unterminated
+IDENT		comment
+IDENT		coming
+PERIOD 		.
+PERIOD 		.
+PERIOD 		.
 ***lexical error: un-expected end of file
 End of file 	

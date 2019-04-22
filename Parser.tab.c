@@ -481,13 +481,13 @@ static const yytype_uint8 yyrline[] =
 {
        0,    62,    62,    71,    72,    73,    74,    75,    78,    78,
       81,    84,    84,    87,    95,    95,    98,    98,   102,   102,
-     105,   106,   108,   109,   110,   111,   112,   113,   114,   115,
-     116,   117,   118,   119,   120,   121,   122,   123,   124,   125,
-     126,   127,   128,   132,   133,   134,   135,   136,   137,   138,
-     139,   142,   143,   146,   146,   149,   150,   151,   152,   153,
-     154,   158,   159,   161,   161,   164,   165,   167,   168,   169,
-     170,   171,   172,   173,   174,   175,   176,   177,   178,   179,
-     180,   181,   182,   183,   184,   185,   186,   187,   188,   189
+     105,   106,   107,   108,   109,   110,   111,   112,   113,   114,
+     115,   116,   117,   118,   119,   120,   121,   122,   123,   124,
+     125,   126,   127,   131,   132,   133,   134,   135,   136,   137,
+     138,   141,   142,   145,   145,   148,   149,   150,   151,   152,
+     153,   157,   158,   160,   160,   163,   164,   165,   166,   167,
+     168,   169,   170,   171,   172,   173,   174,   175,   176,   177,
+     178,   179,   180,   181,   182,   183,   184,   185,   186,   187
 };
 #endif
 
@@ -1512,448 +1512,448 @@ yyreduce:
   case 22:
 
 /* Line 1455 of yacc.c  */
-#line 108 "Parser.y"
+#line 107 "Parser.y"
     {fprintf(file2,"%s",",");;}
     break;
 
   case 23:
 
 /* Line 1455 of yacc.c  */
-#line 109 "Parser.y"
+#line 108 "Parser.y"
     {fprintf(file2,"%0.2lf%s",(yyvsp[(1) - (1)].ival),",");;}
     break;
 
   case 24:
 
 /* Line 1455 of yacc.c  */
-#line 110 "Parser.y"
+#line 109 "Parser.y"
     {fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");;}
     break;
 
   case 25:
 
 /* Line 1455 of yacc.c  */
-#line 111 "Parser.y"
+#line 110 "Parser.y"
     {fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");;}
     break;
 
   case 26:
 
 /* Line 1455 of yacc.c  */
-#line 112 "Parser.y"
+#line 111 "Parser.y"
     {fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");;}
     break;
 
   case 27:
 
 /* Line 1455 of yacc.c  */
-#line 113 "Parser.y"
+#line 112 "Parser.y"
     {fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");;}
     break;
 
   case 28:
 
 /* Line 1455 of yacc.c  */
-#line 114 "Parser.y"
+#line 113 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 29:
 
 /* Line 1455 of yacc.c  */
-#line 115 "Parser.y"
+#line 114 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 30:
 
 /* Line 1455 of yacc.c  */
-#line 116 "Parser.y"
+#line 115 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 31:
 
 /* Line 1455 of yacc.c  */
-#line 117 "Parser.y"
+#line 116 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 32:
 
 /* Line 1455 of yacc.c  */
-#line 118 "Parser.y"
+#line 117 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 33:
 
 /* Line 1455 of yacc.c  */
-#line 119 "Parser.y"
+#line 118 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 34:
 
 /* Line 1455 of yacc.c  */
-#line 120 "Parser.y"
+#line 119 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 35:
 
 /* Line 1455 of yacc.c  */
-#line 121 "Parser.y"
+#line 120 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 36:
 
 /* Line 1455 of yacc.c  */
-#line 122 "Parser.y"
+#line 121 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 37:
 
 /* Line 1455 of yacc.c  */
-#line 123 "Parser.y"
+#line 122 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 38:
 
 /* Line 1455 of yacc.c  */
-#line 124 "Parser.y"
+#line 123 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 39:
 
 /* Line 1455 of yacc.c  */
-#line 125 "Parser.y"
+#line 124 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 40:
 
 /* Line 1455 of yacc.c  */
-#line 126 "Parser.y"
+#line 125 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 41:
 
 /* Line 1455 of yacc.c  */
-#line 127 "Parser.y"
+#line 126 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 42:
 
 /* Line 1455 of yacc.c  */
-#line 128 "Parser.y"
+#line 127 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 43:
 
 /* Line 1455 of yacc.c  */
-#line 132 "Parser.y"
+#line 131 "Parser.y"
     { (yyval.ival) = (yyvsp[(1) - (1)].ival);;}
     break;
 
   case 44:
 
 /* Line 1455 of yacc.c  */
-#line 133 "Parser.y"
+#line 132 "Parser.y"
     {(yyval.ival) = (yyvsp[(1) - (3)].ival) + (yyvsp[(3) - (3)].ival);;}
     break;
 
   case 45:
 
 /* Line 1455 of yacc.c  */
-#line 134 "Parser.y"
+#line 133 "Parser.y"
     {(yyval.ival) = (yyvsp[(1) - (3)].ival) - (yyvsp[(3) - (3)].ival);;}
     break;
 
   case 46:
 
 /* Line 1455 of yacc.c  */
-#line 135 "Parser.y"
+#line 134 "Parser.y"
     {(yyval.ival) = (yyvsp[(1) - (3)].ival) * (yyvsp[(3) - (3)].ival);;}
     break;
 
   case 47:
 
 /* Line 1455 of yacc.c  */
-#line 136 "Parser.y"
+#line 135 "Parser.y"
     {(yyval.ival) = (yyvsp[(1) - (3)].ival) / (yyvsp[(3) - (3)].ival);;}
     break;
 
   case 48:
 
 /* Line 1455 of yacc.c  */
-#line 137 "Parser.y"
+#line 136 "Parser.y"
     { (yyval.ival) = pow ((yyvsp[(1) - (3)].ival), (yyvsp[(3) - (3)].ival)); ;}
     break;
 
   case 49:
 
 /* Line 1455 of yacc.c  */
-#line 138 "Parser.y"
+#line 137 "Parser.y"
     { (yyval.ival) = (yyvsp[(2) - (3)].ival);;}
     break;
 
   case 50:
 
 /* Line 1455 of yacc.c  */
-#line 139 "Parser.y"
+#line 138 "Parser.y"
     { (yyval.ival) = fmod((yyvsp[(1) - (3)].ival), (yyvsp[(3) - (3)].ival)); ;}
     break;
 
   case 51:
 
 /* Line 1455 of yacc.c  */
-#line 142 "Parser.y"
+#line 141 "Parser.y"
     {fprintf(file2,"%0.2lf",(yyvsp[(1) - (1)].ival));;}
     break;
 
   case 52:
 
 /* Line 1455 of yacc.c  */
-#line 143 "Parser.y"
+#line 142 "Parser.y"
     {fprintf(file2,"%0.2lf",(yyvsp[(2) - (2)].ival));;}
     break;
 
   case 55:
 
 /* Line 1455 of yacc.c  */
-#line 149 "Parser.y"
+#line 148 "Parser.y"
     {fprintf(file2,"%0.2lf%s",(yyvsp[(1) - (2)].ival),(yyvsp[(2) - (2)].sval));;}
     break;
 
   case 56:
 
 /* Line 1455 of yacc.c  */
-#line 150 "Parser.y"
+#line 149 "Parser.y"
     {fprintf(file2,"%0.2lf%s",(yyvsp[(1) - (2)].ival),(yyvsp[(2) - (2)].sval));;}
     break;
 
   case 57:
 
 /* Line 1455 of yacc.c  */
-#line 151 "Parser.y"
+#line 150 "Parser.y"
     {fprintf(file2,"%0.2lf%s",(yyvsp[(1) - (2)].ival),(yyvsp[(2) - (2)].sval));;}
     break;
 
   case 58:
 
 /* Line 1455 of yacc.c  */
-#line 152 "Parser.y"
+#line 151 "Parser.y"
     {fprintf(file2,"%0.2lf%s",(yyvsp[(1) - (2)].ival),(yyvsp[(2) - (2)].sval));;}
     break;
 
   case 59:
 
 /* Line 1455 of yacc.c  */
-#line 153 "Parser.y"
+#line 152 "Parser.y"
     {fprintf(file2,"%0.2lf%s",(yyvsp[(1) - (2)].ival),(yyvsp[(2) - (2)].sval));;}
     break;
 
   case 60:
 
 /* Line 1455 of yacc.c  */
-#line 154 "Parser.y"
+#line 153 "Parser.y"
     {fprintf(file2,"%0.2lf%s",(yyvsp[(1) - (2)].ival),(yyvsp[(2) - (2)].sval));;}
     break;
 
   case 61:
 
 /* Line 1455 of yacc.c  */
-#line 158 "Parser.y"
+#line 157 "Parser.y"
     {fprintf(file2,"%s",(yyvsp[(1) - (1)].sval));;}
     break;
 
   case 62:
 
 /* Line 1455 of yacc.c  */
-#line 159 "Parser.y"
+#line 158 "Parser.y"
     {fprintf(file2,"%s%s"," ",(yyvsp[(2) - (2)].sval));;}
     break;
 
   case 65:
 
 /* Line 1455 of yacc.c  */
-#line 164 "Parser.y"
+#line 163 "Parser.y"
     {{fprintf(file2,"%s",",");};}
     break;
 
   case 66:
 
 /* Line 1455 of yacc.c  */
-#line 165 "Parser.y"
+#line 164 "Parser.y"
     {{fprintf(file2,"%0.2lf%s",(yyvsp[(2) - (2)].ival),",");};}
     break;
 
   case 67:
 
 /* Line 1455 of yacc.c  */
-#line 167 "Parser.y"
+#line 165 "Parser.y"
     {fprintf(file2,"%s",",");;}
     break;
 
   case 68:
 
 /* Line 1455 of yacc.c  */
-#line 168 "Parser.y"
+#line 166 "Parser.y"
     {fprintf(file2,"%0.2lf%s",(yyvsp[(1) - (1)].ival),",");;}
     break;
 
   case 69:
 
 /* Line 1455 of yacc.c  */
-#line 169 "Parser.y"
+#line 167 "Parser.y"
     {fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");;}
     break;
 
   case 70:
 
 /* Line 1455 of yacc.c  */
-#line 170 "Parser.y"
+#line 168 "Parser.y"
     {fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");;}
     break;
 
   case 71:
 
 /* Line 1455 of yacc.c  */
-#line 171 "Parser.y"
+#line 169 "Parser.y"
     {fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");;}
     break;
 
   case 72:
 
 /* Line 1455 of yacc.c  */
-#line 172 "Parser.y"
+#line 170 "Parser.y"
     {fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");;}
     break;
 
   case 73:
 
 /* Line 1455 of yacc.c  */
-#line 173 "Parser.y"
+#line 171 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 74:
 
 /* Line 1455 of yacc.c  */
-#line 174 "Parser.y"
+#line 172 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 75:
 
 /* Line 1455 of yacc.c  */
-#line 175 "Parser.y"
+#line 173 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 76:
 
 /* Line 1455 of yacc.c  */
-#line 176 "Parser.y"
+#line 174 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 77:
 
 /* Line 1455 of yacc.c  */
-#line 177 "Parser.y"
+#line 175 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 78:
 
 /* Line 1455 of yacc.c  */
-#line 178 "Parser.y"
+#line 176 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 79:
 
 /* Line 1455 of yacc.c  */
-#line 179 "Parser.y"
+#line 177 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 80:
 
 /* Line 1455 of yacc.c  */
-#line 180 "Parser.y"
+#line 178 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 81:
 
 /* Line 1455 of yacc.c  */
-#line 181 "Parser.y"
+#line 179 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 82:
 
 /* Line 1455 of yacc.c  */
-#line 182 "Parser.y"
+#line 180 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 83:
 
 /* Line 1455 of yacc.c  */
-#line 183 "Parser.y"
+#line 181 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 84:
 
 /* Line 1455 of yacc.c  */
-#line 184 "Parser.y"
+#line 182 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 85:
 
 /* Line 1455 of yacc.c  */
-#line 185 "Parser.y"
+#line 183 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 86:
 
 /* Line 1455 of yacc.c  */
-#line 186 "Parser.y"
+#line 184 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 87:
 
 /* Line 1455 of yacc.c  */
-#line 187 "Parser.y"
+#line 185 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 88:
 
 /* Line 1455 of yacc.c  */
-#line 188 "Parser.y"
+#line 186 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
   case 89:
 
 /* Line 1455 of yacc.c  */
-#line 189 "Parser.y"
+#line 187 "Parser.y"
     {{fprintf(file2,"%s%s",(yyvsp[(1) - (1)].sval),",");};}
     break;
 
@@ -2172,7 +2172,7 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 191 "Parser.y"
+#line 189 "Parser.y"
 
 int main(int argc, char *argv[])
 {

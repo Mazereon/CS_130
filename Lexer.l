@@ -13,7 +13,7 @@ NUMBER [0-9]+[\.0-9]*(e\-)?(e)?[0-9]*
 IDENT  [A-Za-z]*
 TAGIDENT  <[A-Za-z]+
 WHITESPACE  [ \t\n]+
-COMMENT  <!--[ \t\nA-Za-z0-9]*?-->
+COMMENT  <!--([ \t\nA-Za-z0-9]|[+\*\\\/%()=[\]:,;.'""])*-->					
 PLUS  \+
 MINUS  \-
 MULT  \*
@@ -42,7 +42,7 @@ INVALIDTOKEN .
 	fprintf(file1,"%s%s%s%s","***lexical error: badly formed number\n","NUMBER\t\t",yytext,"\n");
 }
 
-<expect><!--([ \t\nA-Za-z0-9])*(\-){0,2}	{
+<expect><!--([ \t\nA-Za-z0-9]|[+\-*\\%()=[\]:,;.'"])*(-|--)		{
 	fprintf(file1,"%s","***lexical error: un-expected end of file\n");
 	yyterminate();
 }

@@ -1,1 +1,1 @@
-some bad numbers follow,:,2.00,valid,:,+,-,*,/,%,**,(,),=,<,>,:,,,.,',",</,+,-,*,/,%,**,(,),=,<,>,:,,,.,',",</,there are thee invalid characters here,:,abc def ghi xyz numbers,123.00,between,1.10,words,<tag,<,notAtag
+some bad numbers follow,:,2.00,valid,:,+,-,*,/,%,**,(,),=,<,>,:,,,.,',",</,+,-,*,/,%,**,(,),=,<,>,:,,,.,',",</,there are thee invalid characters here,:,abc def ghi xyz numbers,123.00,between,1.10,words,<tag,<,notAtag,<,-,-,unterminated comment,<,-,this is not,,,in fact there is an invalid character,-,-,>,unterminated comment coming,.,.,.
