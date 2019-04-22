@@ -2,4 +2,4 @@ description,value
 amount in dollars,1.00
 dollar conversion rate,454.40,69.00,conversion fee,10.00+5.00+7.00,10.00*5.00+7.00,10.00+5.00+7.00-7.00
 purchase amount in pesos,232.20
-these words should show up as identifier tokens,.,these numbers and symbols should show up as well,:,+,-,*,100.10,(,),**,<,>,:,,,;,.,'
+these words should show up as identifier tokens,.,these numbers and symbols should show up as well,:,+,-,*,100.10,11000000000.00,0.00,(,),**,<,>,:,,,;,.,'

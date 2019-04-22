@@ -38,7 +38,7 @@ INVALIDTOKEN .
 
 %%
 
-<expect>([0-9]+\.[^0-9]+)|([0-9]+[\.0-9]*e(\-)?[0-9]*[^0-9])	{
+<expect>([0-9]+\.[^0-9]+)|([0-9]+[\.0-9]*e(\-)?[^0-9])	{
 	fprintf(file1,"%s%s%s%s","***lexical error: badly formed number\n","NUMBER\t\t",yytext,"\n");
 }
 
