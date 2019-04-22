@@ -16,7 +16,7 @@
   double ival;
   char *sval; 
 }
-%expect 21
+%expect 34
 
 %left MINUS
 %left PLUS
@@ -68,10 +68,14 @@ program: summary /*{fprintf(file1,"%s", "End of file \t"); } only put it back if
 }
 ;
 
-summary: contents opener rows closer contents | opener rows closer contents
+summary: out_contents
+    | opener rows closer 
+    | out_contents opener rows closer 
+    | opener rows closer out_contents
+    | out_contents opener rows closer out_contents 
 ;
 
-opener: TAGIDENT GTHAN | TAGIDENT IDENT EQUALS NUMBER GTHAN
+opener: TAGIDENT GTHAN | TAGIDENT IDENT EQUALS NUMBER GTHAN 
 ;
 
 closer: ENDTAGHEAD IDENT GTHAN
@@ -100,6 +104,7 @@ contents: content | content contents
 
 content: LBRACKET S_EXPR RBRACKET  {{fprintf(file2,"%s",",");}}
   | EQUALS EXPR {{fprintf(file2,"%0.2lf%s",$2,",");}}
+//  | ENDTAGHEAD {fprintf(file2,"%s%s",$1,",");}
   | IDENTS {fprintf(file2,"%s",",");}
   | NUMBER {fprintf(file2,"%0.2lf%s",$1,",");}
   | PLUS {fprintf(file2,"%s%s",$1,",");}
@@ -145,10 +150,43 @@ num: NUMBER PLUS {fprintf(file2,"%0.2lf%s",$1,$2);}
 | NUMBER MINUS {fprintf(file2,"%0.2lf%s",$1,$2);}
 | NUMBER MULT {fprintf(file2,"%0.2lf%s",$1,$2);}
 | NUMBER DIVIDE {fprintf(file2,"%0.2lf%s",$1,$2);}
+| NUMBER EXP {fprintf(file2,"%0.2lf%s",$1,$2);}
+| NUMBER MODULO {fprintf(file2,"%0.2lf%s",$1,$2);}
+
 ;
 
 IDENTS: IDENT  {fprintf(file2,"%s",$1);}
  | IDENTS IDENT {fprintf(file2,"%s%s"," ",$2);}
+
+out_contents: out_content | out_content out_contents
+;
+
+out_content: LBRACKET S_EXPR RBRACKET  {{fprintf(file2,"%s",",");}}
+  | EQUALS EXPR {{fprintf(file2,"%0.2lf%s",$2,",");}}
+//  | ENDTAGHEAD {fprintf(file2,"%s%s",$1,",");}
+  | IDENTS {fprintf(file2,"%s",",");}
+  | NUMBER {fprintf(file2,"%0.2lf%s",$1,",");}
+  | PLUS {fprintf(file2,"%s%s",$1,",");}
+  | MINUS {fprintf(file2,"%s%s",$1,",");}
+  | MULT {fprintf(file2,"%s%s",$1,",");}
+  | DIVIDE {fprintf(file2,"%s%s",$1,",");}
+  | MODULO {{fprintf(file2,"%s%s",$1,",");}}
+  | LPAREN {{fprintf(file2,"%s%s",$1,",");}}
+  | RPAREN {{fprintf(file2,"%s%s",$1,",");}}
+  | LBRACKET {{fprintf(file2,"%s%s",$1,",");}}
+  | RBRACKET {{fprintf(file2,"%s%s",$1,",");}}
+  | EQUALS {{fprintf(file2,"%s%s",$1,",");}}
+  | LTHAN {{fprintf(file2,"%s%s",$1,",");}}
+  | GTHAN {{fprintf(file2,"%s%s",$1,",");}}
+  | COLON {{fprintf(file2,"%s%s",$1,",");}}
+  | COMMA {{fprintf(file2,"%s%s",$1,",");}}
+  | SCOLON {{fprintf(file2,"%s%s",$1,",");}}
+  | PERIOD {{fprintf(file2,"%s%s",$1,",");}}
+  | QUOTE {{fprintf(file2,"%s%s",$1,",");}}
+  | DQUOTE {{fprintf(file2,"%s%s",$1,",");}}
+  | EXP {{fprintf(file2,"%s%s",$1,",");}}
+  | ENDTAGHEAD {{fprintf(file2,"%s%s",$1,",");}}
+  | TAGIDENT {{fprintf(file2,"%s%s",$1,",");}}
 
 %%
 int main(int argc, char *argv[])
