@@ -1,0 +1,5 @@
+description,value
+amount in dollars,5.00
+dollar conversion rate,44.44,conversion fee,10.00
+purchase amount in pesos,232.20
+these words should show up as identifier tokens,.,these numbers and symbols should show up as well,:,+,-,*,100.10,11000000000.00,0.00,(,),**,<,>,:,,,;,.,'

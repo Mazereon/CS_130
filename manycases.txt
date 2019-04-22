@@ -17,6 +17,8 @@ numbers123between1.1words
 <tag
 < notAtag
 
+<!-- unterminated comment
+
 <!-- this is a comment
 -->
 
