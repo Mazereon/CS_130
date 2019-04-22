@@ -1,5 +1,7 @@
 # CS_130
 
+https://travis-ci.com/Mazereon/CS_130.svg?token=5UwYrrDuwqoi1qu46f5D&branch=master
+
 Requirements: C, Flex, Bison
 
 Flex: http://gnuwin32.sourceforge.net/packages/flex.htm  <br/>
