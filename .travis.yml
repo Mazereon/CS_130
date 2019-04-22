@@ -5,5 +5,5 @@ script:
   #this one is for the project
   - bison -t -d Parser.y
   - flex Lexer.l
-  - gcc Parser.tab.c lex.yy.c -o hello
+  - gcc Parser.tab.c lex.yy.c -o hello -lm
   - hello tab2.html output1.txt output2.txt
