@@ -63,7 +63,7 @@ program: summary /*{fprintf(file1,"%s", "End of file \t"); } only put it back if
 {
   long pos = ftell(file2);
   fseek(file2, pos-1, SEEK_SET);
-  fprintf(file2,"%s%s","\n");
+  fprintf(file2,"%s","\n");
   fprintf(file1,"%s", "End of file \t");
 }
 ;
@@ -84,7 +84,7 @@ row: opener cells closer
 {
   long pos = ftell(file2);
   fseek(file2, pos-1, SEEK_SET);
-  fprintf(file2,"%s%s","\n");
+  fprintf(file2,"%s","\n");
 }
 ;
 
