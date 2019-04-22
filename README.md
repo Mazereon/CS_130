@@ -1,6 +1,6 @@
 # CS_130
 
-https://travis-ci.com/Mazereon/CS_130.svg?token=5UwYrrDuwqoi1qu46f5D&branch=master
+[![Build Status](https://travis-ci.com/Mazereon/CS_130.svg?token=5UwYrrDuwqoi1qu46f5D&branch=master)](https://travis-ci.com/Mazereon/CS_130)
 
 Requirements: C, Flex, Bison
 
