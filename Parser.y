@@ -16,8 +16,7 @@
   double ival;
   char *sval; 
 }
-%expect 20
-
+%expect 21
 
 %left MINUS
 %left PLUS
@@ -53,6 +52,7 @@
 
 %type <ival> EXPR
 %type <ival> S_EXPR
+%type <sval> IDENTS
 
 %error-verbose
 
@@ -60,9 +60,15 @@
 %%
 
 program: summary /*{fprintf(file1,"%s", "End of file \t"); } only put it back if debugging */ 
+{
+  long pos = ftell(file2);
+  fseek(file2, pos-1, SEEK_SET);
+  fprintf(file2,"%s%s","\n");
+  fprintf(file1,"%s", "End of file \t");
+}
 ;
 
-summary: opener rows closer | opener rows closer contents
+summary: contents opener rows closer contents | opener rows closer contents
 ;
 
 opener: TAGIDENT GTHAN | TAGIDENT IDENT EQUALS NUMBER GTHAN
@@ -76,7 +82,9 @@ rows: row | row rows
 
 row: opener cells closer
 {
-  fprintf(file2,"\n");
+  long pos = ftell(file2);
+  fseek(file2, pos-1, SEEK_SET);
+  fprintf(file2,"%s%s","\n");
 }
 ;
 
@@ -84,6 +92,7 @@ cells: cell | cell cells
 ;
 
 cell: opener contents closer | opener opener contents closer 
+
 ;
 
 contents: content | content contents
@@ -91,7 +100,7 @@ contents: content | content contents
 
 content: LBRACKET S_EXPR RBRACKET  {{fprintf(file2,"%s",",");}}
   | EQUALS EXPR {{fprintf(file2,"%0.2lf%s",$2,",");}}
-  | IDENT {fprintf(file2,"%s%s",$1,",");}
+  | IDENTS {fprintf(file2,"%s",",");}
   | NUMBER {fprintf(file2,"%0.2lf%s",$1,",");}
   | PLUS {fprintf(file2,"%s%s",$1,",");}
   | MINUS {fprintf(file2,"%s%s",$1,",");}
@@ -136,8 +145,10 @@ num: NUMBER PLUS {fprintf(file2,"%0.2lf%s",$1,$2);}
 | NUMBER MINUS {fprintf(file2,"%0.2lf%s",$1,$2);}
 | NUMBER MULT {fprintf(file2,"%0.2lf%s",$1,$2);}
 | NUMBER DIVIDE {fprintf(file2,"%0.2lf%s",$1,$2);}
-
 ;
+
+IDENTS: IDENT  {fprintf(file2,"%s",$1);}
+ | IDENTS IDENT {fprintf(file2,"%s%s"," ",$2);}
 
 %%
 int main(int argc, char *argv[])
@@ -148,14 +159,14 @@ int main(int argc, char *argv[])
     yyin = fopen(argv[1], "r");
     file1 = fopen(argv[2], "w");
     file2 = fopen(argv[3], "w");    
-    //fprintf(file1, "%s%s","TOKEN\t\t","LEXEME\n");   
-	//fprintf(file1, "-------------------------------------------------\n");
-	yyparse();
+    fprintf(file1, "%s%s","TOKEN\t\t","LEXEME\n");   
+    fprintf(file1, "-------------------------------------------------\n");
+    yyparse();
     fclose(yyin);
     fclose(file1);
     fclose(file2);
 }
 
 void yyerror(const char *s) {
-	fprintf(stderr, "%s\n", s);		
+  fprintf(stderr, "%s\n", s);   
 }
