@@ -1,3 +1,5 @@
+TOKEN		LEXEME
+-------------------------------------------------
 TAGIDENT 	<table
 IDENT		border
 EQUALS 		=
@@ -67,7 +69,9 @@ IDENT		td
 GTHAN		>
 TAGIDENT 	<td
 GTHAN		>
+LBRACKET 	[
 NUMBER		69
+RBRACKET 	]
 ENDTAGHEAD 	</
 IDENT		td
 GTHAN		>
@@ -82,37 +86,39 @@ IDENT		td
 GTHAN		>
 TAGIDENT 	<td
 GTHAN		>
-LBRACKET 		[
+LBRACKET 	[
 NUMBER		10
 PLUS		+
 NUMBER		5
 PLUS		+
 NUMBER		7
-RBRACKET 		]
+RBRACKET 	]
 ENDTAGHEAD 	</
 IDENT		td
 GTHAN		>
 TAGIDENT 	<td
 GTHAN		>
-LBRACKET 		[
+LBRACKET 	[
 NUMBER		10
 MULT 		*
 NUMBER		5
 PLUS		+
 NUMBER		7
-RBRACKET 		]
+RBRACKET 	]
 ENDTAGHEAD 	</
 IDENT		td
 GTHAN		>
 TAGIDENT 	<td
 GTHAN		>
-LBRACKET 		[
+LBRACKET 	[
 NUMBER		10
 PLUS		+
 NUMBER		5
 PLUS		+
-NUMBER		7-7
-RBRACKET 		]
+NUMBER		7
+MINUS 		-
+NUMBER		7
+RBRACKET 	]
 ENDTAGHEAD 	</
 IDENT		td
 GTHAN		>
@@ -171,8 +177,10 @@ MINUS 		-
 MULT 		*
 EQUALS 		=
 NUMBER		100.100
-NUMBER		1.1e10
-NUMBER		2.2e-10
+***lexical error: badly formed number
+NUMBER		1.1e10 
+***lexical error: badly formed number
+NUMBER		2.2e-10 
 LPAREN 		(
 RPAREN 		)
 EXP 		**
@@ -183,3 +191,4 @@ COMMA 		,
 SCOLON 		;
 PERIOD 		.
 QUOTE 		'
+End of file 	
