@@ -3,7 +3,7 @@ language: c
 script:
   #- HelloWorld
   #this one is for the project
-  bison -t -d Parser.y
-  flex Lexer.l
-  gcc Parser.tab.c lex.yy.c -o hello
-  hello tab2.html output1.txt output2.txt
+-bison -t -d Parser.y
+-flex Lexer.l
+-gcc Parser.tab.c lex.yy.c -o hello
+-hello tab2.html output1.txt output2.txt
