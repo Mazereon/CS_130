@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.com/Mazereon/CS_130.svg?token=5UwYrrDuwqoi1qu46f5D&branch=master)](https://travis-ci.com/Mazereon/CS_130) <br/>
 **Travis** checks and reports if code will compile after every commit. 
-**MinUnit** is the testing library used. <br/><br/>
+**MinUnit** is the testing framework used. <br/><br/>
 
-**Files**: Flex file, Bison file, Unit Testing file and library, input files, expected output files  <br/>
+**Files**: Flex file, Bison file, Unit Testing file and framework, input files, expected output files  <br/>
 
 **Requirements**: C, Flex, Bison
 
