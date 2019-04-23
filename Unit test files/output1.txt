@@ -2,7 +2,7 @@ TOKEN		LEXEME
 -------------------------------------------------
 IDENT		some
 IDENT		bad
-IDENT		numbers
+IDENT		
 IDENT		follow
 COLON 		:
 ***lexical error: badly formed number
