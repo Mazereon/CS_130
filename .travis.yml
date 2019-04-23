@@ -7,5 +7,5 @@ script:
   - flex Lexer.l
   - gcc Parser.tab.c lex.yy.c -o hello -lm
   # hello.exe tab2.html output1.txt output2.txt
-  - cd $TRAVIS_BUILD_DIR/Unit test files
+  - cd Unit test files
   - gcc -o check test.c
