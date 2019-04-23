@@ -24,6 +24,6 @@
 4.  To run the main method use the command **hello input.txt output1.txt output2.txt**  <br/>
 
 **Testing**:
-1.  Compile the unit testing code located in Unit testing files using the command **gcc -o check unit_test.c**
-2.  Run using the command **check output1.txt expected_output1.txt output2.txt expected_output2.txt** <br/><br/>
+1.  Compile the unit testing code located in Unit testing files using the command **gcc -o check test.c**
+2.  Run using the command **check output1.txt expected_output1.txt** <br/><br/>
 **NOTE: REMEMBER TO PLACE THE OUTPUTS AND EXPECTED OUTPUTS IN THE UNIT TESTING FOLDER.**
