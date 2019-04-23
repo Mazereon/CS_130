@@ -6,6 +6,6 @@ script:
   - bison -t -d Parser.y
   - flex Lexer.l
   - gcc Parser.tab.c lex.yy.c -o hello -lm
-  # hello.exe tab2.html output1.txt output2.txt
+  - hello tab2.html output1.txt output2.txt
   - cd Unit-test-files
   - gcc -o check test.c
